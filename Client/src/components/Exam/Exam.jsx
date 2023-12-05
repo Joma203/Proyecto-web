@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getExam } from "../../services/exams.service";
+import { getExam } from "../../services/user.service";
 import { useCurrentQuestions } from "../../hooks/useCurrentQuestions";
 import Questions from "./Questions/Questions";
 import Controls from "./Controls/Controls";

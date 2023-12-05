@@ -217,3 +217,26 @@ export const changeAvatar = async () => {
         throw new Error("Error while getting the data. Please try again.")
     }
 };
+
+export const getExam = async (examID) =>{
+    const response = await axios.get(`${BASE_URL}/exam/${examID}`, getConfig());
+    const examData = response.data.exam;
+    const preguntasMultiple = examData.Pregunta_opcion_multiple.map((e)=>{return({
+        tipo: "multiple",
+        pregunta: e
+    })})
+    const preguntasMatch = examData.Pregunta_match.map((e)=>{return({
+        tipo: "match",
+        pregunta: e
+    })})
+    const examTemplate = {
+        id: examData._id,
+        preguntas: sortRandom([...preguntasMultiple, ...preguntasMatch])
+    }
+    return (examTemplate);
+}
+
+export const getLessons = async () =>{
+    const response = await axios.get(`${BASE_URL}/lesson`, getConfig());
+    return (response.data.leccion);
+}

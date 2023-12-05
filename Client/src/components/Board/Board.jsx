@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Lesson from './Lesson/Lesson';
-import { getLessons } from '../../services/Lessons.service';
+import { getLessons } from '../../services/user.service';
 import { WhoAmI } from '../../services/user.service';
 import Header from '../Header/Header';
 
