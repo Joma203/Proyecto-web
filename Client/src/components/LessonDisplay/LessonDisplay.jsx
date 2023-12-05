@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
-import { getLessons } from "../../services/Lessons.service";
 import { useEffect, useState } from "react";
 import Navbar from "./SideBar/SideBar";
 import Header from "../Header/Header";
-import { endLesson, endTopic } from "../../services/user.service";
+import { endLesson, endTopic, getLessons } from "../../services/user.service";
 
 const LessonDisplay = () => {
     const { lessonID } = useParams();

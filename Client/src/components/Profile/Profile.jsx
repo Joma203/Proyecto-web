@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { WhoAmI } from "../../services/user.service";
+import { WhoAmI, getLessons } from "../../services/user.service";
 import { rankingPosition } from "../../services/user.service";
-import { getLessons } from "../../services/Lessons.service";
 import Header from "../Header/Header";
 import AvatarsPurchased from "./AvatarsPurchased/AvatarsPurchased";
 

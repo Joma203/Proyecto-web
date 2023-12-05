@@ -218,6 +218,10 @@ export const changeAvatar = async () => {
     }
 };
 
+const sortRandom = (Answers) => {
+    return [...Answers].sort(() => Math.random() < 0.5 ? 1 : -1);
+}
+
 export const getExam = async (examID) =>{
     const response = await axios.get(`${BASE_URL}/exam/${examID}`, getConfig());
     const examData = response.data.exam;
