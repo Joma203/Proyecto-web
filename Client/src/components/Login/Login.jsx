@@ -44,7 +44,7 @@ const Login = () => {
             </NavLink>
             <div className="text-white font-link flex flex-col justify-center items-center gap-8 p-10">
                 <figure className="w-64 h-64 overflow-hidden rounded-full">
-                    <img src="./src/assets/logo-rojo.png" alt="logo" className="w-full h-full object-cover" />
+                    <img src="/src/assets/logo-rojo.png" alt="logo" className="w-full h-full object-cover" />
                 </figure>
                 <p className="text-3xl font-bold">Inicio de sesión</p>
 
